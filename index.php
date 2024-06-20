@@ -1,82 +1,168 @@
-<?php include_once("inc_header.php")?>
-        <!-- untuk home -->
-        <section id="home">
-            <img src="<?php echo ambil_gambar('1')?>"/>
-            <div class="kolom">
-                <p class="deskripsi"><?php echo ambil_kutipan('1') ?></p>
-                <h2><?php echo ambil_judul('1') ?></h2>
-                <?php echo maximum_kata(ambil_isi('1'),20) ?>
-                <p><a href="<?php echo buat_link_halaman(1)?>" class="tbl-pink">Pelajari Lebih Lanjut</a></p>
-            </div>
-        </section>
+<?php include_once("inc_header.php") ?>
+<!-- untuk home -->
+<section id="home">
+    <img src="<?php echo ambil_gambar('1') ?>" />
+    <div class="kolom">
+        <p class="deskripsi"><?php echo ambil_kutipan('1') ?></p>
+        <h2><?php echo ambil_judul('1') ?></h2>
+        <?php echo maximum_kata(ambil_isi('1'), 20) ?>
+        <p><a href="<?php echo buat_link_halaman(1) ?>" class="tbl-pink">Pelajari Lebih lanjut</a></p>
+    </div>
+</section>
 
-        <!-- untuk courses -->
-        <section id="courses">
-            <div class="kolom">
-                <p class="deskripsi"><?php echo ambil_kutipan('2') ?></p>
-                <h2><?php echo ambil_judul('2') ?></h2>
-                <?php echo maximum_kata(ambil_isi('2'),100) ?>
-                <p><a href="<?php echo buat_link_halaman(2)?>" class="tbl-biru">Pelajari Lebih Lanjut</a></p>
-            </div>
-            <img src="<?php echo ambil_gambar('2')?>"/>
-        </section>
+<!-- untuk courses -->
+<section id="courses">
+    <div class="kolom">
+        <p class="deskripsi"><?php echo ambil_kutipan('2') ?></p>
+        <h2><?php echo ambil_judul('2') ?></h2>
+        <?php echo maximum_kata(ambil_isi('2'), 100) ?>
+        <p><a href="<?php echo buat_link_halaman(2) ?>" class="tbl-biru">Pelajari Lebih Lanjut</a></p>
+    </div>
+    <img src="<?php echo ambil_gambar('2') ?>" />
+</section>
 
-        <!-- untuk tutors -->
-        <section id="tutors">
-            <div class="tengah">
-                <div class="kolom">
-                    <p class="deskripsi">Welcome to my website</p>
-                    <h2>Pemesanan Tempat</h2>
-                    <p>Jika anda ingin memesan tempat ini, anda dapat mengisi formulir pemesanan tempat pada label di bawah ini.</p>
-                </div>
+<!-- untuk tutors -->
+<section id="tutors">
+    <div class="tengah">
+        <div class="kolom">
+            <p class="deskripsi">Welcome to my website</p>
+            <h2>Pemesanan Tempat</h2>
+            <p>Jika anda ingin memesan tempat ini, anda dapat mengisi formulir pemesanan tempat pada label di bawah ini.</p>
+        </div>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CDN Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- CDN Bootstrap Icons-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <!-- CDN Boxicons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <!-- CSS Navbar -->
+        <link rel="stylesheet" href="../assets/css/navbar.css">
+        <!-- CSS Card -->
+        <link rel="stylesheet" href="../assets/css/form_tiket.css">
+        <!-- Icon -->
+        <link rel="shortcun icon" href="../assets/img/icon.png">
+        <form action="pesan_tiket.php" method="POST">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td><label for="name">Nama Lengkap:</label></td>
+                        <td><input type="text" id="name" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="address">Alamat:</label></td>
+                        <td><input type="text" id="address" name="address" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">Nomor Telepon:</label></td>
+                        <td><input type="tel" id="phone" name="phone" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td><input type="email" id="email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="date">Tanggal Pemesanan:</label></td>
+                        <td><input type="date" id="date" name="date" required></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="submit">Pesan Sekarang</button>
+        </form>
+    </div>
+</section>
 
-                <div class="tutor-list">
-                    <div class="kartu-tutor">
-                        <img src="https://dfu1k3y1rami2.cloudfront.net/wp-content/uploads/2014/07/26195109/2020_cb.jpg"/>
-                        <p>Jason Lee Scott</p>
-                    </div>
-                    <div class="kartu-tutor">
-                        <img src="https://images.ctfassets.net/1wryd5vd9xez/4DxzhQY7WFsbtTkoYntq23/a4a04701649e92a929010a6a860b66bf/https___cdn-images-1.medium.com_max_2000_1_Y6l_FDhxOI1AhjL56dHh8g.jpeg"/>
-                        <p>John Doe</p>
-                    </div>
-                    <div class="kartu-tutor">
-                        <img src="https://images.fastcompany.net/image/upload/w_596,c_limit,q_auto:best,f_auto/fc/3021752-inline-i-1-why-square-designed-its-new-offices-to-work-like-a-city.jpg"/>
-                        <p>Michael Dell</p>
-                    </div>
-                    <div class="kartu-tutor">
-                        <img src="https://blogs-images.forbes.com/jackkelly/files/2019/06/Jack-Kelly_avatar_1559658819-400x400.jpg"/>
-                        <p>Bruce Wills</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- untuk partners -->
-        <section id="partners">
-            <div class="tengah">
-                <div class="kolom">
-                    <p class="deskripsi">Lihat siapa saja yang sudah berkunjung</p>
-                    <h2>Pengelolaan Wisatawan</h2>
-                    <p>Pada halaman ini, anda dapat melihat siapa saja yang sudah berkunjung ke Taman Cerdas Salatiga ini.</p>
-                </div>
 
-                <div class="partner-list">
-                    <div class="kartu-partner">
-                        <img src="https://www.designevo.com/res/templates/thumb_small/black-wheat-and-mortarboard.png"/>
-                    </div>
-                    <div class="kartu-partner">
-                        <img src="https://image.freepik.com/free-vector/campus-collage-university-education-logo-design-template_7492-63.jpg"/>
-                    </div>
-                    <div class="kartu-partner">
-                        <img src="https://image.freepik.com/free-vector/campus-collage-university-education-logo-design-template_7492-62.jpg"/>
-                    </div>
-                    <div class="kartu-partner">
-                        <img src="https://www.designevo.com/res/templates/thumb_small/encircled-branches-and-book.png"/>
-                    </div>
-                    <div class="kartu-partner">
-                        <img src="https://image.freepik.com/free-vector/campus-collage-university-education-logo-design-template_7492-64.jpg"/>
-                    </div>
-                </div>
-            </div>
-        </section>
-<?php include_once("inc_footer.php")?>
+<!-- untuk partners -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Laporan Rekap Wisatawan</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Laporan Rekap Wisatawan Yang Berkunjung</h2>
+    <h3>Telah Terverifikasi (Lunas)</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID Booking</th>
+                <th>Nama Wisatawan</th>
+                <th>Verifikasi Info</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>Abi</td>
+                <td>Terverifikasi</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Leo</td>
+                <td>Terverifikasi</td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>David</td>
+                <td>Terverifikasi</td>
+            </tr>
+            <tr>
+                <td>004</td>
+                <td>Dana</td>
+                <td>Terverifikasi</td>
+            </tr>
+            <tr>
+                <td>005</td>
+                <td>Lia</td>
+                <td>Terverifikasi</td>
+            </tr>
+            <tr>
+                <td>006</td>
+                <td>Opet</td>
+                <td>Terverifikasi</td>
+            </tr>
+            <tr>
+                <td>007</td>
+                <td>Dani</td>
+                <td>Terverifikasi</td>
+            </tr>
+            <tr>
+                <td>008</td>
+                <td>Julian</td>
+                <td>Terverifikasi</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
+
+<?php include_once("inc_footer.php") ?>
